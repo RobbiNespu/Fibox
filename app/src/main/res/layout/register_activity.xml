@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefeb"
+    android:padding="10dp"
+    >
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_number"
+            android:hint="Enter your phone number"
+            android:textColorHint="#e2636369"
+            android:background="#fff"
+            android:padding="10dp"
+            android:layout_marginBottom="6dp"
+            android:inputType="number"
+            />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRegister"
+            android:padding="8dp"
+            android:background="#DB4338"
+            android:textColor="#fff"
+            android:text="Sign up"
+            />
+
+</LinearLayout>

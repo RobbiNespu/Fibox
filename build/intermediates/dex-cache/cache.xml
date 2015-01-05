@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/kamarulzaman/Documents/Development/android 2/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-3b8a9b530620b5ddccd93779a95a1d14b5a4a993.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/classes-c6ab23ec0dffbd06c72c4ea5747dd6fb60bd64de.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.5/77bf7cacf9cefe19dc105e5425d2eb1bb5285881/android-async-http-1.4.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="77bf7cacf9cefe19dc105e5425d2eb1bb5285881">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.5-d21732b4455bd0071e68ae9a637db39f1b5f0da7.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/classes-8af5d48b17a401b174cda66413d5abd59fee421d.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-c61e1788a25c5a43b6ac49618efe558f6ea8e020.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/3.1.59/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2dd7b1a9ea65bb03d9cd16df777eeaf537a1fc81">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/classes-e2dc02fe381c0ce27332ba9e1c24be4dc554e34c.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/exploded-aar/com.github.satyan/sugar/1.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="07e07903922250dabf50c7d131d6fa069a050305">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/classes-10e478ec64b53e8511f621859b172786fdb43df9.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-830fa9ded596d975cfd8dc99d58fe6012522f3ca.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/1.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b2f7dddedcdb3facde33de103dcc32b10c43b92e">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/classes-f62fe084c1a864171683cb81f2b67f1a95624f62.jar" />
+    </item>
+
+</items>
