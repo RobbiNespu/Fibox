@@ -107,7 +107,6 @@ public class Chat extends ActionBarActivity {
             registerReceiver(new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context context, Intent intent) {
-                    Toast.makeText(getApplicationContext(), "Ok receive message", Toast.LENGTH_SHORT).show();
                     setupChat();
                 }
             }, new IntentFilter("my.net.fims.fibox.chatmessage"));

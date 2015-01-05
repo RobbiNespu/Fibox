@@ -1,6 +1,9 @@
 package my.net.fims.fibox.Views;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -50,6 +53,16 @@ public class Conversation extends ActionBarActivity {
         setContentView(R.layout.conversation_activity);
         lview = (ListView) findViewById(R.id.lview);
         setupConversation();
+        try{
+            registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    setupConversation();
+                }
+            }, new IntentFilter("my.net.fims.fibox.chatmessage"));
+        } catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override

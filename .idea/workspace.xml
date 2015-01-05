@@ -13,6 +13,9 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: my.net.fims.fibox" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="521ac696-35ad-4373-8f94-accbcb4c5e29" name="Default" comment="" />
     <ignored path="Fibox.iws" />
@@ -36,37 +39,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Chat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Chat.java">
+      <file leaf-file-name="Conversation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Conversation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.346154" vertical-offset="1355" max-vertical-offset="3525">
-              <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="817" max-vertical-offset="2295">
+              <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1472#1483#0" expanded="true" />
-                <element signature="e#3691#3989#0" expanded="true" />
-                <element signature="e#3974#3975#0" expanded="true" />
+                <element signature="e#1253#1272#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GcmBroadcastReceiver.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Controller/GcmBroadcastReceiver.java">
+      <file leaf-file-name="Chat.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Chat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4383117" vertical-offset="735" max-vertical-offset="1275">
-              <caret line="72" column="98" selection-start-line="72" selection-start-column="98" selection-end-line="72" selection-end-column="98" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="930">
-              <caret line="48" column="67" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
-              <folding />
+            <state vertical-scroll-proportion="0.17857143" vertical-offset="1535" max-vertical-offset="3465">
+              <caret line="108" column="71" selection-start-line="108" selection-start-column="71" selection-end-line="108" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1472#1483#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -671,10 +665,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Adapter/ContactArray.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Contact.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Controller/CommonFunction.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Conversation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Controller/GcmBroadcastReceiver.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Chat.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Conversation.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Chat.java" />
       </list>
     </option>
   </component>
@@ -1129,7 +1123,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42692938" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42692938" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1467,19 +1461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Conversation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.42056075" vertical-offset="825" max-vertical-offset="2190">
-          <caret line="46" column="69" selection-start-line="45" selection-start-column="8" selection-end-line="46" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1142#1161#0" expanded="true" />
-            <element signature="e#5233#5689#0" expanded="true" />
-            <element signature="e#5674#5675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Register.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29452056" vertical-offset="666" max-vertical-offset="2475">
@@ -1490,32 +1471,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Chat.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Controller/GcmBroadcastReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.346154" vertical-offset="1355" max-vertical-offset="3525">
-          <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1472#1483#0" expanded="true" />
-            <element signature="e#3691#3989#0" expanded="true" />
-            <element signature="e#3974#3975#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.58441556" vertical-offset="690" max-vertical-offset="1275">
+          <caret line="72" column="98" selection-start-line="72" selection-start-column="98" selection-end-line="72" selection-end-column="98" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="930">
+        <state vertical-scroll-proportion="1.2616823" vertical-offset="315" max-vertical-offset="930">
           <caret line="48" column="67" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Controller/GcmBroadcastReceiver.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Conversation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4383117" vertical-offset="735" max-vertical-offset="1275">
-          <caret line="72" column="98" selection-start-line="72" selection-start-column="98" selection-end-line="72" selection-end-column="98" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="817" max-vertical-offset="2295">
+          <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1253#1272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/my/net/fims/fibox/Views/Chat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17857143" vertical-offset="1535" max-vertical-offset="3465">
+          <caret line="108" column="71" selection-start-line="108" selection-start-column="71" selection-end-line="108" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1472#1483#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
