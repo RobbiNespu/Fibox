@@ -58,4 +58,12 @@ public class Settings {
             return null;
         }
     }
+
+    public String getPhoneNumber() {
+        try{
+            return pref.getString("phone_number", "");
+        } catch(Exception e) {
+            return "";
+        }
+    }
 }

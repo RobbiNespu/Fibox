@@ -160,7 +160,9 @@ public class Chat extends ActionBarActivity {
             RequestParams params = new RequestParams();
             params.add("api_key", config.getAPIKey());
             params.add("action", "send_message");
-            params.add("phone_number", phoneNumber);
+            params.add("phone_number", settings.getPhoneNumber());
+            params.add("targeted_phone_number", phoneNumber);
+            params.add("token", settings.getToken());
             params.add("message", message);
             client.post(config.getAPIUrl(), params, new JsonHttpResponseHandler(){
                 @Override

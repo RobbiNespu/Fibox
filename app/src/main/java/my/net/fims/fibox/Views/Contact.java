@@ -138,6 +138,7 @@ public class Contact extends ActionBarActivity {
                 RequestParams params = new RequestParams();
                 params.add("action", "get_contacts");
                 params.add("data", contact_array.toString());
+                params.add("phone_number", settings.getPhoneNumber());
                 params.add("token", settings.getToken());
                 params.add("api_key", config.getAPIKey());
                 client.post(config.getAPIUrl(), params, new JsonHttpResponseHandler(){
