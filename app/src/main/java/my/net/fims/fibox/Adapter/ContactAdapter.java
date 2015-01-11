@@ -62,6 +62,7 @@ public class ContactAdapter extends BaseAdapter {
             if(convertView == null) {
                 holder = new ViewHolder();
                 convertView = LayoutInflater.from(context).inflate(R.layout.contact_row, parent, false);
+                convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }

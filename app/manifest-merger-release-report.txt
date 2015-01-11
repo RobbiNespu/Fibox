@@ -1,0 +1,157 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
+	package
+		ADDED from AndroidManifest.xml:3:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionCode
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:6:5
+	android:name
+		ADDED from AndroidManifest.xml:6:22
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from AndroidManifest.xml:7:5
+	android:name
+		ADDED from AndroidManifest.xml:7:22
+uses-permission#android.permission.WAKE_LOCK
+ADDED from AndroidManifest.xml:8:5
+	android:name
+		ADDED from AndroidManifest.xml:8:22
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from AndroidManifest.xml:10:5
+	android:name
+		ADDED from AndroidManifest.xml:10:22
+permission#my.net.fims.fibox.permission.C2D_MESSAGE
+ADDED from AndroidManifest.xml:11:5
+	android:protectionLevel
+		ADDED from AndroidManifest.xml:11:73
+	android:name
+		ADDED from AndroidManifest.xml:11:17
+uses-permission#my.net.fims.fibox.permission.C2D_MESSAGE
+ADDED from AndroidManifest.xml:12:5
+	android:name
+		ADDED from AndroidManifest.xml:12:22
+uses-permission#android.permission.READ_CONTACTS
+ADDED from AndroidManifest.xml:14:5
+	android:name
+		ADDED from AndroidManifest.xml:14:22
+application
+ADDED from AndroidManifest.xml:16:5
+MERGED from com.android.support:appcompat-v7:21.0.3:16:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.github.satyan:sugar:1.3:11:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.github.castorflex.smoothprogressbar:library:1.0.0:12:5
+	android:label
+		ADDED from AndroidManifest.xml:19:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:17:9
+	android:icon
+		ADDED from AndroidManifest.xml:18:9
+	android:theme
+		ADDED from AndroidManifest.xml:20:9
+	android:name
+		ADDED from AndroidManifest.xml:21:9
+activity#my.net.fims.fibox.MainActivity
+ADDED from AndroidManifest.xml:23:9
+	android:label
+		ADDED from AndroidManifest.xml:25:13
+	android:name
+		ADDED from AndroidManifest.xml:24:13
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:26:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:27:17
+	android:name
+		ADDED from AndroidManifest.xml:27:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:29:17
+	android:name
+		ADDED from AndroidManifest.xml:29:27
+activity#my.net.fims.fibox.Views.Register
+ADDED from AndroidManifest.xml:33:9
+	android:name
+		ADDED from AndroidManifest.xml:33:19
+activity#my.net.fims.fibox.Views.Conversation
+ADDED from AndroidManifest.xml:34:9
+	android:name
+		ADDED from AndroidManifest.xml:34:19
+activity#my.net.fims.fibox.Views.Contact
+ADDED from AndroidManifest.xml:35:9
+	android:name
+		ADDED from AndroidManifest.xml:35:19
+activity#my.net.fims.fibox.Views.Chat
+ADDED from AndroidManifest.xml:36:9
+	android:name
+		ADDED from AndroidManifest.xml:36:19
+activity#my.net.fims.fibox.Views.FirstTimeSetup
+ADDED from AndroidManifest.xml:37:9
+	android:name
+		ADDED from AndroidManifest.xml:37:19
+meta-data#DATABASE
+ADDED from AndroidManifest.xml:39:9
+	android:name
+		ADDED from AndroidManifest.xml:39:20
+	android:value
+		ADDED from AndroidManifest.xml:39:44
+meta-data#VERSION
+ADDED from AndroidManifest.xml:40:9
+	android:name
+		ADDED from AndroidManifest.xml:40:20
+	android:value
+		ADDED from AndroidManifest.xml:40:43
+meta-data#QUERY_LOG
+ADDED from AndroidManifest.xml:41:9
+	android:name
+		ADDED from AndroidManifest.xml:41:20
+	android:value
+		ADDED from AndroidManifest.xml:41:45
+meta-data#DOMAIN_PACKAGE_NAME
+ADDED from AndroidManifest.xml:42:9
+	android:name
+		ADDED from AndroidManifest.xml:42:20
+	android:value
+		ADDED from AndroidManifest.xml:42:55
+receiver#my.net.fims.fibox.Controller.GcmBroadcastReceiver
+ADDED from AndroidManifest.xml:45:9
+	android:permission
+		ADDED from AndroidManifest.xml:47:13
+	android:name
+		ADDED from AndroidManifest.xml:46:13
+intent-filter#com.google.android.c2dm.intent.RECEIVE+my.net.fims.fibox+my.net.fims.fibox.chatmessage
+ADDED from AndroidManifest.xml:48:13
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from AndroidManifest.xml:49:17
+	android:name
+		ADDED from AndroidManifest.xml:49:25
+action#my.net.fims.fibox.chatmessage
+ADDED from AndroidManifest.xml:50:17
+	android:name
+		ADDED from AndroidManifest.xml:50:25
+category#my.net.fims.fibox
+ADDED from AndroidManifest.xml:51:17
+	android:name
+		ADDED from AndroidManifest.xml:51:27
+uses-sdk
+INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
+MERGED from com.android.support:appcompat-v7:21.0.3:15:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.github.satyan:sugar:1.3:7:5
+MERGED from com.google.android.gms:play-services:3.1.59:7:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.makeramen:roundedimageview:1.5.0:7:5
+MERGED from com.github.castorflex.smoothprogressbar:library:1.0.0:8:5
+	android:targetSdkVersion
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0

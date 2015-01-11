@@ -1,5 +1,6 @@
 package my.net.fims.fibox.Views;
 
+import android.app.ProgressDialog;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.database.Cursor;
@@ -54,6 +55,7 @@ public class Contact extends ActionBarActivity {
     ArrayList<ContactDataArray> contacts;
     ContactAdapter adapter;
     ListView lview;
+    ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,6 +133,15 @@ public class Contact extends ActionBarActivity {
 
     private void AsyncContact() {
         try{
+            dialog = new ProgressDialog(Contact.this);
+            dialog.setTitle("Loading");
+            dialog.setMessage("Please wait, syncing your contacts...");
+            dialog.setCancelable(false);
+            dialog.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        try{
             contacts = commondata.getContacts();
             if(contacts != null) {
                 JSONArray contact_array = convertJSONContactArray();
@@ -147,6 +158,11 @@ public class Contact extends ActionBarActivity {
                         super.onFailure(statusCode, headers, throwable, errorResponse);
                         Toast.makeText(getApplicationContext(), "Sync contact failed", Toast.LENGTH_SHORT).show();
                         setSupportProgressBarIndeterminateVisibility(false);
+                        try{
+                            dialog.hide();
+                        } catch(Exception e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     @Override
@@ -172,6 +188,11 @@ public class Contact extends ActionBarActivity {
                                 }
                             }
                             Toast.makeText(getApplicationContext(), "Sync contact successful", Toast.LENGTH_SHORT).show();
+                            try{
+                                dialog.hide();
+                            } catch(Exception e) {
+                                e.printStackTrace();
+                            }
                         } catch(Exception e) {
                             e.printStackTrace();
                             Toast.makeText(getApplicationContext(), "Sync contact failed", Toast.LENGTH_SHORT).show();
@@ -179,10 +200,20 @@ public class Contact extends ActionBarActivity {
                     }
                 });
             } else {
+                try{
+                    dialog.hide();
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
                 Toast.makeText(getApplicationContext(), "No contacts found", Toast.LENGTH_SHORT).show();
             }
         } catch(Exception e) {
             e.printStackTrace();
+            try{
+                dialog.hide();
+            } catch(Exception ea) {
+                ea.printStackTrace();
+            }
         }
     }
 

@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -123,7 +125,7 @@ public class Chat extends ActionBarActivity {
                 my.net.fims.fibox.Model.Conversation conversation_data = conversation.get(0);
                 conversationId = Long.toString(conversation_data.getId());
             } else {
-                my.net.fims.fibox.Model.Conversation new_conversation =  new my.net.fims.fibox.Model.Conversation(phoneNumber, "chat");
+                my.net.fims.fibox.Model.Conversation new_conversation =  new my.net.fims.fibox.Model.Conversation(phoneNumber, "chat", commonfunction.getTimeStamp());
                 new_conversation.save();
                 conversationId = Long.toString(new_conversation.getId());
             }
@@ -141,12 +143,7 @@ public class Chat extends ActionBarActivity {
             try{
                 if(message.getText().length() > 0)
                 {
-                    sendMessage(message.getText().toString());
-                    my.net.fims.fibox.Model.Message save_message = new Message(conversationId, "me", phoneNumber, message.getText().toString(), commonfunction.getTimeStamp());
-                    save_message.save();
-                    items.add(new ChatArray(save_message.getId().toString(), message.getText().toString(), commonfunction.friendlyDateTime(Long.parseLong(commonfunction.getTimeStamp())), true));
-                    message.setText("");
-                    refreshChat();
+                    sendMessage(message);
                 }
             } catch(Exception e) {
                 e.printStackTrace();
@@ -154,8 +151,11 @@ public class Chat extends ActionBarActivity {
         }
     }
 
-    private void sendMessage(String message){
+    private void sendMessage(final EditText msg){
         try{
+            final EditText message = msg;
+            final String text = message.getText().toString();
+            msg.setText("");
             AsyncHttpClient client = new AsyncHttpClient();
             RequestParams params = new RequestParams();
             params.add("api_key", config.getAPIKey());
@@ -163,16 +163,22 @@ public class Chat extends ActionBarActivity {
             params.add("phone_number", settings.getPhoneNumber());
             params.add("targeted_phone_number", phoneNumber);
             params.add("token", settings.getToken());
-            params.add("message", message);
+            params.add("message", text);
             client.post(config.getAPIUrl(), params, new JsonHttpResponseHandler(){
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                     super.onSuccess(statusCode, headers, response);
+
                     try{
-                        Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+                        my.net.fims.fibox.Model.Conversation conversation_update = my.net.fims.fibox.Model.Conversation.findById(my.net.fims.fibox.Model.Conversation.class, Long.parseLong(conversationId));
+                        conversation_update.lastConversation = commonfunction.getTimeStamp();
+                        conversation_update.save();
+                        my.net.fims.fibox.Model.Message save_message = new Message(conversationId, "me", phoneNumber, text, commonfunction.getTimeStamp());
+                        save_message.save();
+                        items.add(new ChatArray(save_message.getId().toString(), text, commonfunction.friendlyDateTime(Long.parseLong(commonfunction.getTimeStamp())), true));
+                        refreshChat();
                     } catch(Exception e) {
                         e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), "Send message failed", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -224,7 +230,19 @@ public class Chat extends ActionBarActivity {
     private void SetupActionBar(){
         actionbar = getSupportActionBar();
         actionbar.setTitle("Chat");
-        //actionbar.setSubtitle("Online");
+        actionbar.setSubtitle("Online");
         actionbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.app_actionbar));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add("Options").setIcon(getResources().getDrawable(R.drawable.ic_action_attachment)).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        menu.add("Search").setIcon(getResources().getDrawable(R.drawable.ic_action_search));
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 }

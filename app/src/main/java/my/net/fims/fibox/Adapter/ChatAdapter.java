@@ -2,6 +2,7 @@ package my.net.fims.fibox.Adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +23,7 @@ import my.net.fims.fibox.R;
  */
 public class ChatAdapter extends BaseAdapter {
 
-    ArrayList<ChatArray> items = new ArrayList<ChatArray>();
+    ArrayList<ChatArray> items;
     Context context;
 
     public ChatAdapter(Context context, ArrayList<ChatArray> items){
@@ -53,52 +54,47 @@ public class ChatAdapter extends BaseAdapter {
             if(convertView == null) {
                 convertView = LayoutInflater.from(context).inflate(R.layout.chat_row, parent, false);
                 holder = new ViewHolder();
+                holder.chat_id = (TextView) convertView.findViewById(R.id.chat_id);
+                holder.message = (TextView) convertView.findViewById(R.id.message);
+                holder.message_time = (TextView) convertView.findViewById(R.id.message_time);
+                convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            try{
 
-                holder.id = (TextView) convertView.findViewById(R.id.id);
-                holder.message = (TextView) convertView.findViewById(R.id.message);
-                holder.message_time = (TextView) convertView.findViewById(R.id.message_time);
+            holder.chat_id.setText(item.getID());
+            holder.message.setText(item.getMessage());
+            holder.message_time.setText(item.getMessageTime());
 
-                holder.id.setText(item.getID());
-                holder.message.setText(item.getMessage());
-                holder.message_time.setText(item.getMessageTime());
+            TableLayout tbllayout = (TableLayout) convertView.findViewById(R.id.chatrow);
+            TableRow tblrow = (TableRow) convertView.findViewById(R.id.row);
+            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) tbllayout.getLayoutParams();
 
-                TableLayout tbllayout = (TableLayout) convertView.findViewById(R.id.chatrow);
-                TableRow tblrow = (TableRow) convertView.findViewById(R.id.row);
-                LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) tbllayout.getLayoutParams();
+            if(item.getMySelf()) {
+                tbllayout.setBackgroundResource(R.drawable.balloon_outgoing_normal);
+                tbllayout.setPadding(30, 20, 50, 20);
+                holder.message_time.setTextColor(Color.parseColor("#838383"));
+                holder.message.setTextColor(Color.parseColor("#282828"));
+                lp.gravity = Gravity.RIGHT;
 
-                if(item.getMySelf()) {
-                    tbllayout.setBackgroundResource(R.drawable.balloon_outgoing_normal);
-                    tbllayout.setPadding(30, 20, 50, 20);
-                    holder.message_time.setTextColor(Color.parseColor("#838383"));
-                    holder.message.setTextColor(Color.parseColor("#282828"));
-                    lp.gravity = Gravity.RIGHT;
-                    tbllayout.setLayoutParams(lp);
-                } else {
-                    tbllayout.setBackgroundResource(R.drawable.balloon_incoming_normal);
-                    tbllayout.setPadding(50, 20, 30, 20);
-                    holder.message_time.setTextColor(Color.parseColor("#838383"));
-                    holder.message.setTextColor(Color.parseColor("#282828"));
-                    lp.gravity = Gravity.LEFT;
-                    tbllayout.setLayoutParams(lp);
-                }
-
-            } catch(Exception e) {
-                e.printStackTrace();
+            } else {
+                tbllayout.setBackgroundResource(R.drawable.balloon_incoming_normal);
+                tbllayout.setPadding(50, 20, 30, 20);
+                holder.message_time.setTextColor(Color.parseColor("#838383"));
+                holder.message.setTextColor(Color.parseColor("#282828"));
+                lp.gravity = Gravity.LEFT;
             }
-
+            tbllayout.setLayoutParams(lp);
+            return convertView;
         } catch(Exception e) {
             e.printStackTrace();
+            return convertView;
         }
-        return convertView;
     }
 
     class ViewHolder{
-        TextView id;
+        TextView chat_id;
         TextView message;
         TextView message_time;
     }

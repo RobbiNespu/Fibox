@@ -79,7 +79,7 @@ public class Conversation extends ActionBarActivity {
 
     private void setupConversation() {
         try{
-            List<my.net.fims.fibox.Model.Conversation> conversations = my.net.fims.fibox.Model.Conversation.listAll(my.net.fims.fibox.Model.Conversation.class);
+            List<my.net.fims.fibox.Model.Conversation> conversations = my.net.fims.fibox.Model.Conversation.find(my.net.fims.fibox.Model.Conversation.class, null, null, null, "last_Conversation desc", null);
             if(conversations != null && conversations.size() > 0)
             {
                 items.removeAll(items);

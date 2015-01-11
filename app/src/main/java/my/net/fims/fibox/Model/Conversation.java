@@ -7,15 +7,16 @@ import com.orm.SugarRecord;
  */
 public class Conversation extends SugarRecord<Conversation>{
 
-    String chatType, phoneNumber;
+    public String chatType, phoneNumber, lastConversation;
 
     public Conversation(){
 
     }
 
-    public Conversation(String phoneNumber, String chatType){
+    public Conversation(String phoneNumber, String chatType, String lastConversation){
         this.chatType = chatType;
         this.phoneNumber = phoneNumber;
+        this.lastConversation = lastConversation;
     }
 
     public String getChatType(){
@@ -25,5 +26,7 @@ public class Conversation extends SugarRecord<Conversation>{
     public String getPhoneNumber(){
         return this.phoneNumber;
     }
+
+    public String getLastConversation() { return this.lastConversation; }
 
 }

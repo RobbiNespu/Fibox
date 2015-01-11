@@ -34,6 +34,7 @@
         <activity android:name=".Views.Conversation"></activity>
         <activity android:name=".Views.Contact"></activity>
         <activity android:name=".Views.Chat"></activity>
+        <activity android:name=".Views.FirstTimeSetup"></activity>
 
         <meta-data android:name="DATABASE" android:value="fiboxdb.db" />
         <meta-data android:name="VERSION" android:value="1" />

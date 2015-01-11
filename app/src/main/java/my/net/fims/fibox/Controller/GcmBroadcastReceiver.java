@@ -1,11 +1,15 @@
 package my.net.fims.fibox.Controller;
 
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -13,8 +17,9 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import java.util.List;
 
-import my.net.fims.fibox.Model.Conversation;
 import my.net.fims.fibox.Model.Message;
+import my.net.fims.fibox.R;
+import my.net.fims.fibox.Views.Conversation;
 
 /**
  * Created by kamarulzaman on 1/2/15.
@@ -57,11 +62,15 @@ public class GcmBroadcastReceiver extends BroadcastReceiver {
                             if(conversations != null && conversations.size() > 0)
                             {
                                 my.net.fims.fibox.Model.Conversation conversation = conversations.get(0);
+                                //my.net.fims.fibox.Model.Conversation conversation_update = my.net.fims.fibox.Model.Conversation.findById(my.net.fims.fibox.Model.Conversation.class, conversation.getId());
+                                //conversation_update.lastConversation =
+                                conversation.lastConversation = commonfunction.getTimeStamp();
+                                conversation.save();
                                 my.net.fims.fibox.Model.Message save_message = new Message(Long.toString(conversation.getId()), extras.getString("phone_number"), "me", extras.getString("message"), commonfunction.getTimeStamp());
                                 save_message.save();
                                 save_ok = true;
                             } else {
-                                my.net.fims.fibox.Model.Conversation new_conversation =  new my.net.fims.fibox.Model.Conversation(extras.getString("phone_number"), "chat");
+                                my.net.fims.fibox.Model.Conversation new_conversation =  new my.net.fims.fibox.Model.Conversation(extras.getString("phone_number"), "chat", commonfunction.getTimeStamp());
                                 new_conversation.save();
                                 my.net.fims.fibox.Model.Message save_message = new Message(Long.toString(new_conversation.getId()), extras.getString("phone_number"), "me", extras.getString("message"), commonfunction.getTimeStamp());
                                 save_message.save();
@@ -70,6 +79,7 @@ public class GcmBroadcastReceiver extends BroadcastReceiver {
                             if(save_ok)
                             {
                               try{
+                                  sendNotification(arg0, "New chat message", extras.getString("message"));
                                   Intent chat_message = new Intent("my.net.fims.fibox.chatmessage");
                                   arg0.sendBroadcast(chat_message);
                               } catch(Exception e)
@@ -88,6 +98,22 @@ public class GcmBroadcastReceiver extends BroadcastReceiver {
             e.printStackTrace();
         }
         setResultCode(Activity.RESULT_OK);
+    }
+
+    public void sendNotification(Context context, String title, String text){
+        Intent intent = new Intent(context, Conversation.class);
+        intent.putExtra("message", text);
+        PendingIntent pIntent = PendingIntent.getActivity(context, 0, intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(
+                context)
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setTicker(text)
+                .setContentTitle(title)
+                .setContentText(text)
+                .setContentIntent(pIntent)
+                .setAutoCancel(true);
+        NotificationManager notificationmanager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationmanager.notify(0, builder.build());
     }
 
 }

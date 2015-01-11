@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/kamarulzaman/Documents/Development/android 2/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-3b8a9b530620b5ddccd93779a95a1d14b5a4a993.jar" />
-    </item>
-    <item
         jar="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
         <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/classes-c6ab23ec0dffbd06c72c4ea5747dd6fb60bd64de.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/Documents/Development/android 2/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-3b8a9b530620b5ddccd93779a95a1d14b5a4a993.jar" />
     </item>
     <item
         jar="/Users/kamarulzaman/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.5/77bf7cacf9cefe19dc105e5425d2eb1bb5285881/android-async-http-1.4.5.jar"
@@ -63,6 +63,13 @@
         revision="21.1.2"
         sha1="b2f7dddedcdb3facde33de103dcc32b10c43b92e">
         <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/classes-f62fe084c1a864171683cb81f2b67f1a95624f62.jar" />
+    </item>
+    <item
+        jar="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/1.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="698b40a43ecff2ebadc58b019ae236edd053fc67">
+        <dex dex="/Users/kamarulzaman/AndroidstudioProjects/Fibox/app/build/intermediates/pre-dexed/debug/classes-60e17205c49f39333747f99b7f9bd06264023af0.jar" />
     </item>
 
 </items>
