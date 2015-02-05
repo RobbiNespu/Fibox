@@ -13,3 +13,7 @@ Screenshot
 ![Alt text](/screenshot/shot2.png "Conversation list activity")
 ![Alt text](/screenshot/shot3.png "Contacts activity")
 ![Alt text](/screenshot/shot4.png "Chat activity")
+
+Database structure
+----
+![Alt text](/screenshot/shot_db1.png "Example database structure")
