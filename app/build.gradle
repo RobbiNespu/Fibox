@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "my.net.fims.fibox"
+        applicationId "my.net.chat.fibox"
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
